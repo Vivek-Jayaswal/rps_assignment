@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Comment Component Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comment management component built using React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+The component follows:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- the UI/design from the first provided image
+- the interaction behavior from the second provided image
 
-## React Compiler
+# Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Open/Close comment modal
+- Add new comments
+- Edit existing comments
+- Delete comments
+- Upload supporting documents
+- File preview functionality
+- File download functionality
+- Scrollable comment section
+- Form validation
+- Responsive design
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- Lucide React Icons
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Clone the repository: git clone <repo-url>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Navigate to project: cd project-name
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies: npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Run development server: npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Functionality
+
+## Initial State
+
+- Displays the existing/current value
+- Empty form fields
+
+## Editing State
+
+- User can update field value
+- Add comment
+- Upload supporting document
+
+## Submitted State
+
+- Submitted value becomes the new current value
+- Comment card displays:
+  - current value
+  - comment
+  - attachment
+  - edit/delete actions
+
+# File Handling
+
+Uploaded files support:
+
+- View
+- Download
+- File size display
+
+
+# Assumptions
+
+The implementation follows:
+
+- Design structure from image 1
+- Modal interactions from image 2
+
+The submitted field value is treated as the updated current value after submission.
+
+# Future Improvements
+
+- Backend integration
+- Persistent storage
+- Authentication
+- Multiple file uploads
+- Drag & drop upload
+- Better accessibility support
+
+# Author
+Vivek Jaiswal
